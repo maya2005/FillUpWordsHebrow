@@ -9,10 +9,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        GameFragment fragment = new GameFragment();
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
 
 
     }
 
-    GameLayoutFragment fragment = new GameLayoutFragment();
+
 }
